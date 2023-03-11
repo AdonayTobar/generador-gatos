@@ -7,24 +7,43 @@
     <title>Gatos</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-900">
 
     <div class="flex flex-col justify-center items-center pt-12">
-       <h1 class="text-5xl font-bold ">Gatitos aleatorios</h1>
-       <div class="flex gap-10 mt-7 px-20">
-        <div class="rounded-md h-96 w-auto overflow-hidden">
-        <img id="img1" class="h-96 rounded-md w-auto" alt="Imagen de gatitos">
-        </div>
-        <div class="rounded-md h-96 w-auto overflow-hidden">
-        <img id="img2" class="h-96 rounded-md w-auto" alt="Imagen de gatitos">
-        </div>
-        <div class="rounded-md h-96 w-auto overflow-hidden">
-        <img id="img3" class="h-96 rounded-md w-auto" alt="Imagen de gatitos">
-       </div>
-       </div>
+       <h1 class="text-5xl text-center font-bold text-gray-300">Gatitos aleatorios</h1>
+        <span class="error"></span>
+       <section class="gatosrandon flex flex-col ">
+            <div class="flex gap-5 mt-7 px-1 flex-wrap justify-center">
+                <div class="rounded-md h-64 w-80 overflow-hidden relative">
+                    <img id="img1" class="min-w-80 min-h-full  rounded-md  z-10" alt="Imagen de gatitos">
+                    <button id="guardar" class="guardar bg-green-500 border-2 border-gray-900 rounded-full h-8 w-8 text-white font-bold flex items-center place-content-center absolute z-1000 top-52 right-2">+</button>
+                </div>
+                <div class="rounded-md h-64 w-80 overflow-hidden relative">
+                    <img id="img2" class="min-w-80 rounded-md min-h-full z-10" alt="Imagen de gatitos">
+                    <button id="guardar1" class="guardar1 bg-green-500 border-2 border-gray-900 rounded-full h-8 w-8 text-white font-bold flex items-center place-content-center absolute z-1000 top-52 right-2">+</button>
+                </div>
+            </div>
+            <button class="recargar bg-green-500 px-3 py-1 rounded-md mt-7 text-white hover:bg-green-700 w-32 mx-auto">Cambiar</button>
+       </section>
+        <section class="flex flex-col pb-10 pt-12">
+            <h2 class="text-2xl text-center font-bold text-gray-300">Subir Foto de gato</h2>
+            <form action="" id="cargarForm" class="flex flex-col">
+                <input type="file" id="file" name="file" class="mt-7 w-40 md:w-full">
+                <img id="vista-previa" src="#" alt="Vista previa del archivo" class="hidden w-40 rounded-md mx-auto mt-7">
+                <button type="button" id="btnS" class="bg-green-500 px-3 py-1 rounded-md mt-7 text-white hover:bg-green-700 w-32 mx-auto">Subir</button>
+            </form>
+        </section>
+       <section class="favoritos mt-7 pb-7">
+            <h2 class="text-4xl text-center font-bold text-gray-300">Gatitos Favoritos</h2>
+            <div id="favoritos" class="favoritos flex gap-5 mt-7 px-1 flex-wrap justify-center">
+                
+            </div>
+       </section>
        
        
-       <button class="bg-green-500 px-3 py-1 rounded-md mt-7 text-white hover:bg-green-700">Cambiar</button>
+       
+       
+       
     </div>
     
 
